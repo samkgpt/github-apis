@@ -9,26 +9,25 @@
   "author": "Shyam Gupta",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shyam047/github-api-module.git"
+    "url": "https://github.com/samkgpt/github-api-module.git"
   },
   "keywords": [
     "git",
     "github",
-    "create",
-    "update",
-    "issue",
-    "list",
+    "create issue",
+    "update issue",
+    "list issue",
     "repo",
     "repository",
     "cli",
     "get",
     "patch",
     "api",
-    "request",
+    "https",
     "post"
   ],
   "license": "MIT",
   "dependencies": {
-    "request": "^2.88.2"
+    "https": "^1.0.0"
   }
 }

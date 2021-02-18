@@ -1,0 +1,34 @@
+{
+  "name": "github-api-module",
+  "version": "1.2.6",
+  "description": "To get github user details, listing, creating, updating issue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shyam Gupta",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shyam047/github-api-module.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "create",
+    "update",
+    "issue",
+    "list",
+    "repo",
+    "repository",
+    "cli",
+    "get",
+    "patch",
+    "api",
+    "request",
+    "post"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}

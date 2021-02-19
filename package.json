@@ -1,12 +1,12 @@
 {
   "name": "github-api-module",
-  "version": "1.2.6",
-  "description": "To get github user details, listing, creating, updating issue",
+  "version": "1.2.7",
+  "description": "To get github user details, listing, creating, updating issue.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shyam Gupta",
+  "author": "S.Gupta",
   "repository": {
     "type": "git",
     "url": "https://github.com/samkgpt/github-api-module.git"

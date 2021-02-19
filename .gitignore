@@ -1,41 +1,17 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-*.tmp
-*.log
-
-# Dependency directories (remove the comment below to include it)
-
-# vendor/
-
-.idea/
-.vscode/
-/webapp/build/
 node_modules/
-/webapp/.DS_Store
-*.lock
-/.netrc
-/go.sum
-/pkged.go
-go_build.sh
-.DS_Store
-/config.yaml
-/cmd/_sandbox/
-
-config.server.yaml
-kbsrv
-.editorconfig
-go_build_*
-
-# dotenv environment variables file
+# Ignore files with sensitive environment variables
 .env
 .env.test
+# Next.js output
+.next/
+# Parcel cache
+.cache/
+# Ignore IDE configuration files
+.idea/ 
+.vscode/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

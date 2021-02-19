@@ -1,28 +1,22 @@
-## Create, Update, List Issues from an GitHub repository
+## Create, Update, List Issues and Repo from an GitHub repository
 
 
 ## Installation
 
 ``` bash
-$ npm install github-api-module
+$ npm install github-apis
 ```
 
 ``` javascript
-var {listIssues, listIssue, createIssue, updateIssue} = require( 'github-api-module' );
+var {listIssues, listIssue, createIssue, updateIssue} = require( 'github-apis' );
 ```
-## Examples
+## GitHub Issue Examples
 ``` javascript
 // List all issue from an repo
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "repo",
-  body: {
-    title: "",
-    body: "",
-    issue_number: "",
-    state: ""
-  },
 };
 console.log( listIssues(options) );  // returns <all issue_data>
 ```
@@ -33,10 +27,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    title: "",
-    body: "",
     issue_number: 23, // required
-    state: ""
   },
 };
 console.log( listIssue(options) );  // returns <a issue_data>
@@ -50,8 +41,6 @@ const options = {
   body: {
     title: "title", // required
     body: "body",
-    issue_number: "",
-    state: ""
   },
 };
 console.log( createIssue(options) );  // returns <created issue_data>
@@ -70,6 +59,41 @@ const options = {
   },
 };
 console.log( updateIssue(options) );  // returns <updated issue_data>
+```
+
+## GitHub Repo Examples
+``` javascript
+// List a repo from an GitHub org
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+};
+console.log( listRepo(options) );  // returns <repo_data>
+```
+``` javascript
+// Update repo details and its privacy
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    name: "name",
+    description: "description",
+    private: false, // true or false
+    archived: false, // true or false
+  },
+};
+console.log( updateRepo(options) );  // returns <repo_updated_data>
+```
+``` javascript
+// Delete a repo from an org
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo"
+};
+console.log( deleteRepo(options) );  // returns <>
 ```
 
 To [authenticate][github-oauth2] with GitHub, set the [`token`][github-token] option.

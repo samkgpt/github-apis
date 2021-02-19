@@ -35,7 +35,7 @@ const options = {
   body: {
     title: "",
     body: "",
-    issue_number: "23", // required
+    issue_number: 23, // required
     state: ""
   },
 };
@@ -65,7 +65,7 @@ const options = {
   body: {
     title: "title",
     body: "body",
-    issue_number: "23", // required
+    issue_number: 23, // required
     state: "open or closed"
   },
 };

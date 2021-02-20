@@ -53,7 +53,7 @@ const options = {
 console.log( createIssue(options) );  // returns <created_issue_data>
 ```
 ``` javascript
-// Updating a issue on repo like issue title, body, status
+// Update a issue on repo like issue title, body, status
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",

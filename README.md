@@ -1,5 +1,9 @@
-## Create, Update, List Issues and Repo from an GitHub repository
+## GitHub Api's
+![npm](https://img.shields.io/npm/v/github-apis) ![node-current](https://img.shields.io/node/v/github-apis?color=green) ![Hackage-Deps](https://img.shields.io/hackage-deps/v/github-apis)
 
+``` bash
+Creates, updates, closed issues and list, updates, delete repo details from an GitHub repository
+```
 
 ## Installation
 
@@ -7,8 +11,10 @@
 $ npm install github-apis
 ```
 
+## Usage
 ``` javascript
-var {listIssues, listIssue, createIssue, updateIssue} = require( 'github-apis' );
+var { listIssues, createIssue, updateIssue } = require( 'github-apis' );
+var { listRepo, updateRepo, deleteRepo } = require( 'github-apis' );
 ```
 ## GitHub Issue Examples
 ``` javascript
@@ -61,7 +67,7 @@ const options = {
 console.log( updateIssue(options) );  // returns <updated issue_data>
 ```
 
-## GitHub Repo Examples
+## GitHub Repository Examples
 ``` javascript
 // List a repo from an GitHub org
 const options = {

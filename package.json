@@ -1,7 +1,7 @@
 {
   "name": "github-apis",
-  "version": "1.0.1",
-  "description": "To get github user details, listing, creating, updating issue.",
+  "version": "1.0.3",
+  "description": "To get github issue and repo access like details, listing, creating, updating issue, deleting.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,17 +14,19 @@
   "keywords": [
     "git",
     "github",
-    "create issue",
-    "update issue",
-    "list issue",
-    "repo",
-    "repository",
-    "cli",
+    "github-apis",
+    "create issue on gitHub",
+    "update issue on gitHub",
+    "list issue",   
+    "repository",    
     "get",
     "patch",
     "api",
     "https",
-    "post"
+    "post",
+    "delete repo",
+    "update repo",
+    "list repo"
   ],
   "license": "MIT",
   "dependencies": {

@@ -10,10 +10,10 @@ let { listRepo, updateRepo, deleteRepo } = require("./lib/repo");
 
 /**
  * Import repositories functions
- * @Function listIssues - List all issues of an repository
- * @Function listIssues - List a issue of an repository
+ * @Function listIssues - List all issues of a repository
+ * @Function listIssues - List a issue of a repository
  * @Function createIssue - Creating a issue on a repository
- * @Function updateIssue - Updating a issue detials of an repository
+ * @Function updateIssue - Updating a issue detials of a repository
  */
 let {
   listIssue,

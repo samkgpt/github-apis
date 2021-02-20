@@ -1,8 +1,9 @@
 ## GitHub Api's
-![npm](https://img.shields.io/npm/v/github-apis) ![node-current](https://img.shields.io/node/v/github-apis?color=green) ![Hackage-Deps](https://img.shields.io/hackage-deps/v/github-apis)
+![npm](https://img.shields.io/npm/v/github-apis) [![Support Node of LTS](https://img.shields.io/badge/node-latest-brightgreen.svg)](https://nodejs.org/) [![dependencies Status](https://status.david-dm.org/gh/request/request.svg)](https://david-dm.org/request/request)
 
 ``` bash
-Creates, updates, closed issues and list, updates, delete repo details from an GitHub repository
+Creates, updates, closed issues from a GitHub repository.
+Read, updates, delete repo details from a GitHub repository.
 ```
 
 ## Installation
@@ -18,16 +19,16 @@ var { listRepo, updateRepo, deleteRepo } = require( 'github-apis' );
 ```
 ## GitHub Issue Examples
 ``` javascript
-// List all issue from an repo
+// List all issues from a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "repo",
 };
-console.log( listIssues(options) );  // returns <all issue_data>
+console.log( listIssues(options) );  // returns <issues_data>
 ```
 ``` javascript
-// List a issue from an repo
+// List a issue from a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -36,10 +37,10 @@ const options = {
     issue_number: 23, // required
   },
 };
-console.log( listIssue(options) );  // returns <a issue_data>
+console.log( listIssue(options) );  // returns <issue_data>
 ```
 ``` javascript
-// Creat issue on an repo
+// Create issue on a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -49,10 +50,10 @@ const options = {
     body: "body",
   },
 };
-console.log( createIssue(options) );  // returns <created issue_data>
+console.log( createIssue(options) );  // returns <created_issue_data>
 ```
 ``` javascript
-// Upadting a issue on repo like issue title, body, status
+// Updating a issue on repo like issue title, body, status
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -64,12 +65,12 @@ const options = {
     state: "open or closed"
   },
 };
-console.log( updateIssue(options) );  // returns <updated issue_data>
+console.log( updateIssue(options) );  // returns <updated_issue_data>
 ```
 
 ## GitHub Repository Examples
 ``` javascript
-// List a repo from an GitHub org
+// List a repository from a GitHub org
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -78,7 +79,7 @@ const options = {
 console.log( listRepo(options) );  // returns <repo_data>
 ```
 ``` javascript
-// Update repo details and its privacy
+// Update repository details and its privacy
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -90,10 +91,10 @@ const options = {
     archived: false, // true or false
   },
 };
-console.log( updateRepo(options) );  // returns <repo_updated_data>
+console.log( updateRepo(options) );  // returns <updated_repo_data>
 ```
 ``` javascript
-// Delete a repo from an org
+// Delete a repository from a org
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",

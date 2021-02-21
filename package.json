@@ -1,6 +1,6 @@
 {
   "name": "github-apis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "To get github issue and repo access like details, listing, creating, updating issue, deleting.",
   "main": "index.js",
   "scripts": {

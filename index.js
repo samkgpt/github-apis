@@ -6,7 +6,13 @@
  * @Function updateRepo - Update a repository details
  * @Function deleteRepo - For deleting a repository
  */
-let { listRepo, updateRepo, deleteRepo } = require("./lib/repo");
+let {
+  listRepo,
+  listRepos,
+  createRepo,
+  updateRepo,
+  deleteRepo,
+} = require("./lib/repo");
 
 /**
  * Import repositories functions
@@ -27,6 +33,8 @@ let {
  */
 module.exports = {
   listRepo,
+  listRepos,
+  createRepo,
   updateRepo,
   deleteRepo,
   listIssue,

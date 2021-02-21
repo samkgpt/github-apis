@@ -3,7 +3,7 @@
 
 ``` bash
 Creates, updates, closed issues from a GitHub repository.
-Read, updates, delete repo details from a GitHub repository.
+Read, create, updates, delete repo details from a GitHub repository.
 ```
 
 ## Installation
@@ -15,7 +15,7 @@ $ npm install github-apis
 ## Usage
 ``` javascript
 var { listIssues, createIssue, updateIssue } = require( 'github-apis' );
-var { listRepo, updateRepo, deleteRepo } = require( 'github-apis' );
+var { listRepos, createRepo, updateRepo, deleteRepo } = require( 'github-apis' );
 ```
 ## GitHub Issue Examples
 ``` javascript
@@ -70,7 +70,16 @@ console.log( updateIssue(options) );  // returns <updated_issue_data>
 
 ## GitHub Repository Examples
 ``` javascript
-// List a repository from a GitHub org
+// List all repository for the authenticated user
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "",
+};
+console.log( listRepos(options) );  // returns <repos_data>
+```
+``` javascript
+// List a repository for the authenticated user
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -79,7 +88,19 @@ const options = {
 console.log( listRepo(options) );  // returns <repo_data>
 ```
 ``` javascript
-// Update repository details and its privacy
+// Create a repository for the authenticated user
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  body: {
+    name: "name", // new repo name
+    description: "description",
+    private: false, // true or false
+  },
+};
+console.log( createRepo(options) );  // returns <created_repo_data>
+```
+``` javascript
+// Update a repository details and its privacy
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -94,7 +115,7 @@ const options = {
 console.log( updateRepo(options) );  // returns <updated_repo_data>
 ```
 ``` javascript
-// Delete a repository from a org
+// Delete a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -102,6 +123,8 @@ const options = {
 };
 console.log( deleteRepo(options) );  // returns <>
 ```
+
+For more body options flow [github docs][github-docs], set the param into the body.
 
 To [authenticate][github-oauth2] with GitHub, set the [`token`][github-token] option.
 
@@ -113,9 +136,9 @@ To [authenticate][github-oauth2] with GitHub, set the [`token`][github-token] op
 
 ## Copyright
 
-Copyright &copy; 2021. S.Gupta.
+Copyright &copy; 2021. S.Gupta
 
-
+[github-docs]: https://docs.github.com/en/rest/reference/repos
 [github-api]: https://developer.github.com/v3/
 [github-token]: https://github.com/settings/tokens/new
 [github-oauth2]: https://developer.github.com/v3/#oauth2-token-sent-in-a-header

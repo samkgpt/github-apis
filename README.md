@@ -15,7 +15,7 @@ $ npm install github-apis
 ## Usage
 ``` javascript
 var { listIssues, createIssue, updateIssue } = require( 'github-apis' );
-var { listRepos, createRepo, updateRepo, deleteRepo } = require( 'github-apis' );
+var { listRepos,createRepo,updateRepo,deleteRepo } = require( 'github-apis' );
 ```
 ## GitHub Issue Examples
 ``` javascript
@@ -62,7 +62,8 @@ const options = {
     title: "title",
     body: "body",
     issue_number: 23, // required
-    state: "open or closed"
+    state: "open", // open or closed
+    labels: ["bug", "dev"],
   },
 };
 console.log( updateIssue(options) );  // returns <updated_issue_data>
@@ -142,5 +143,3 @@ Copyright &copy; 2021. S.Gupta
 [github-api]: https://developer.github.com/v3/
 [github-token]: https://github.com/settings/tokens/new
 [github-oauth2]: https://developer.github.com/v3/#oauth2-token-sent-in-a-header
-[github-user-agent]: https://developer.github.com/v3/#user-agent-required
-[github-rate-limit]: https://developer.github.com/v3/rate_limit/

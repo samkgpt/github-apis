@@ -18,15 +18,9 @@
     "create issue on gitHub",
     "update issue on gitHub",
     "list issue",   
-    "repository",    
-    "get",
-    "patch",
-    "api",
-    "https",
-    "post",
+    "list repo",
     "delete repo",
-    "update repo",
-    "list repo"
+    "update repo"
   ],
   "license": "MIT",
   "dependencies": {

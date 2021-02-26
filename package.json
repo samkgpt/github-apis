@@ -1,7 +1,7 @@
 {
   "name": "github-apis",
   "version": "1.0.6",
-  "description": "To get github issue and repo access like details, listing, creating, updating issue, deleting.",
+  "description": "To get github issue, comments and repo access like details, listing, creating, updating and deleting.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
     "create issue on gitHub",
     "update issue on gitHub",
     "list issue",   
-    "list repo",
+    "issue comments",
     "delete repo",
     "update repo"
   ],

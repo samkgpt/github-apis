@@ -55,6 +55,8 @@ const options = {
   body: {
     title: "title", // required
     body: "body",
+    state: "open", // open or closed
+    labels: ["bug", "dev"],
   },
 };
 console.log(createIssue(options)); // returns <created_issue_data>
@@ -70,7 +72,7 @@ const options = {
     title: "title",
     body: "body",
     issue_number: 23, // required
-    state: "open", // open or closed
+    state: "closed", // open or closed
     labels: ["bug", "dev"],
   },
 };

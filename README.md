@@ -1,33 +1,39 @@
 ## GitHub Api's
+
 ![npm](https://img.shields.io/npm/v/github-apis) [![Support Node of LTS](https://img.shields.io/badge/node-latest-brightgreen.svg)](https://nodejs.org/) [![dependencies Status](https://status.david-dm.org/gh/request/request.svg)](https://david-dm.org/request/request)
 
-``` bash
+```bash
 Creates, updates, closed issues from a GitHub repository.
 Read, create, updates, delete repo details from a GitHub repository.
 ```
 
 ## Installation
 
-``` bash
+```bash
 $ npm install github-apis
 ```
 
 ## Usage
-``` javascript
-var { listIssues, createIssue, updateIssue } = require( 'github-apis' );
-var { listRepos,createRepo,updateRepo,deleteRepo } = require( 'github-apis' );
+
+```javascript
+var { listIssues, createIssue, updateIssue } = require("github-apis");
+var { listRepos, createRepo, updateRepo, deleteRepo } = require("github-apis");
+var { listComment, createComment, updateComment } = require("github-apis");
 ```
+
 ## GitHub Issue Examples
-``` javascript
+
+```javascript
 // List all issues from a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "repo",
 };
-console.log( listIssues(options) );  // returns <issues_data>
+console.log(listIssues(options)); // returns <issues_data>
 ```
-``` javascript
+
+```javascript
 // List a issue from a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
@@ -37,9 +43,10 @@ const options = {
     issue_number: 23, // required
   },
 };
-console.log( listIssue(options) );  // returns <issue_data>
+console.log(listIssue(options)); // returns <issue_data>
 ```
-``` javascript
+
+```javascript
 // Create issue on a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
@@ -50,9 +57,10 @@ const options = {
     body: "body",
   },
 };
-console.log( createIssue(options) );  // returns <created_issue_data>
+console.log(createIssue(options)); // returns <created_issue_data>
 ```
-``` javascript
+
+```javascript
 // Update a issue on repo like issue title, body, status
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
@@ -66,29 +74,32 @@ const options = {
     labels: ["bug", "dev"],
   },
 };
-console.log( updateIssue(options) );  // returns <updated_issue_data>
+console.log(updateIssue(options)); // returns <updated_issue_data>
 ```
 
 ## GitHub Repository Examples
-``` javascript
+
+```javascript
 // List all repository for the authenticated user
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "",
 };
-console.log( listRepos(options) );  // returns <repos_data>
+console.log(listRepos(options)); // returns <repos_data>
 ```
-``` javascript
+
+```javascript
 // List a repository for the authenticated user
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "repo",
 };
-console.log( listRepo(options) );  // returns <repo_data>
+console.log(listRepo(options)); // returns <repo_data>
 ```
-``` javascript
+
+```javascript
 // Create a repository for the authenticated user
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
@@ -98,9 +109,10 @@ const options = {
     private: false, // true or false
   },
 };
-console.log( createRepo(options) );  // returns <created_repo_data>
+console.log(createRepo(options)); // returns <created_repo_data>
 ```
-``` javascript
+
+```javascript
 // Update a repository details and its privacy
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
@@ -113,27 +125,92 @@ const options = {
     archived: false, // true or false
   },
 };
-console.log( updateRepo(options) );  // returns <updated_repo_data>
+console.log(updateRepo(options)); // returns <updated_repo_data>
 ```
-``` javascript
+
+```javascript
 // Delete a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
-  repo: "repo"
+  repo: "repo",
 };
-console.log( deleteRepo(options) );  // returns <>
+console.log(deleteRepo(options)); // returns <>
+```
+
+## GitHub Issue Comment Examples
+
+```javascript
+// List issue comments for a repository
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+};
+console.log(listComments(options)); // returns <repos_data>
+```
+
+```javascript
+// Get an issue comment
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    comment_id: "comment_id",
+  },
+};
+console.log(listComment(options)); // returns <repo_data>
+```
+
+```javascript
+// Create an issue comment
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    body: "comment_data",
+    issue_number: "issue_number",
+  },
+};
+console.log(createComment(options)); // returns <created_repo_data>
+```
+
+```javascript
+// Update a repository details and its privacy
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    body: "comment_data",
+    comment_id: "comment_id",
+  },
+};
+console.log(updateComment(options)); // returns <updated_repo_data>
+```
+
+```javascript
+// Delete an issue comment
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    comment_id: "comment_id",
+  },
+};
+console.log(deleteComment(options)); // returns <>
 ```
 
 For more body options flow [github docs][github-docs], set the param into the body.
 
 To [authenticate][github-oauth2] with GitHub, set the [`token`][github-token] option.
 
-
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT).
-
 
 ## Copyright
 

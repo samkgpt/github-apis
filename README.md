@@ -3,8 +3,8 @@
 ![npm](https://img.shields.io/npm/v/github-apis) [![Support Node of LTS](https://img.shields.io/badge/node-latest-brightgreen.svg)](https://nodejs.org/) [![dependencies Status](https://status.david-dm.org/gh/request/request.svg)](https://david-dm.org/request/request)
 
 ```bash
-Creates, updates, closed issues from a GitHub repository.
-Read, create, updates, delete repo details from a GitHub repository.
+Creates, list, updates, closed, delete repo, issues and issue
+comment from a GitHub repository.
 ```
 
 ## Installation

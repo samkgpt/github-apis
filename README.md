@@ -24,7 +24,7 @@ var { listComment, createComment, updateComment } = require("github-apis");
 ## GitHub Issue Examples
 
 ```javascript
-// List all issues from a repository
+// List repository issues
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -34,7 +34,7 @@ console.log(listIssues(options)); // returns <issues_data>
 ```
 
 ```javascript
-// List a issue from a repository
+// List a repository issue
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -174,7 +174,7 @@ const options = {
     issue_number: "issue_number",
   },
 };
-console.log(createComment(options)); // returns <created_repo_data>
+console.log(createComment(options)); // returns <created_data>
 ```
 
 ```javascript
@@ -188,7 +188,7 @@ const options = {
     comment_id: "comment_id",
   },
 };
-console.log(updateComment(options)); // returns <updated_repo_data>
+console.log(updateComment(options)); // returns <updated_data>
 ```
 
 ```javascript

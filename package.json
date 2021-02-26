@@ -2,7 +2,7 @@
   "name": "github-apis",
   "version": "1.0.6",
   "description": "To get github issue, comments and repo access like details, listing, creating, updating and deleting.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

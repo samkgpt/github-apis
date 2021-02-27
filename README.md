@@ -3,8 +3,8 @@
 ![npm](https://img.shields.io/npm/v/github-apis) [![Support Node of LTS](https://img.shields.io/badge/node-latest-brightgreen.svg)](https://nodejs.org/) [![dependencies Status](https://status.david-dm.org/gh/request/request.svg)](https://david-dm.org/request/request)
 
 ```bash
-Creates, list, updates, closed, delete repo, issues and issue comment
-from a GitHub repository.
+Creates, list, updates, closed, delete repo, issues, issue comment and
+issue assignee from a GitHub repository.
 ```
 
 ## Installation
@@ -19,6 +19,7 @@ $ npm install github-apis
 var { listIssues, createIssue, updateIssue } = require("github-apis");
 var { listRepos, createRepo, updateRepo, deleteRepo } = require("github-apis");
 var { listComments, createComment, updateComment } = require("github-apis");
+var { listAssignees, addAssignees, removeAssignees } = require("github-apis");
 ```
 
 ## GitHub Issue Examples

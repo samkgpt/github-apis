@@ -72,7 +72,7 @@ const options = {
 ```
 
 ```javascript
-// Update a issue on repo like issue title, body, status
+// Update a issue on repo like title, body, status, labels
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
@@ -82,7 +82,7 @@ const options = {
     body: "body",
     issue_number: 23, // required
     state: "closed", // open or closed
-    labels: ["bug", "dev"],
+    labels: ["enhancement", "qa"],
   },
 };
 
@@ -109,7 +109,7 @@ const options = {
 ```
 
 ```javascript
-// Lock an issue
+// Unlock an issue
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",

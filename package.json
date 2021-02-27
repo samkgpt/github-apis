@@ -1,6 +1,6 @@
 {
   "name": "github-apis",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "To get github issue, comments and repo access like details, listing, creating, updating and deleting.",
   "main": "lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "create issue on gitHub",
     "update issue on gitHub",
     "list issue",   
-    "issue comments",
+    "create issue comments",
     "delete repo",
     "update repo"
   ],

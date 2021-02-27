@@ -91,6 +91,39 @@ const options = {
 })();
 ```
 
+```javascript
+// Lock an issue
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    issue_number: 23, // required
+    lock_reason: "lock_reason",
+  },
+};
+
+(async () => {
+  console.log(await lockIssue(options)); // returns <>
+})();
+```
+
+```javascript
+// Lock an issue
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    issue_number: 23, // required
+  },
+};
+
+(async () => {
+  console.log(await unlockIssue(options)); // returns <>
+})();
+```
+
 ## GitHub Repository Examples
 
 ```javascript

@@ -28,7 +28,7 @@ var { listAssignees, addAssignees, removeAssignees } = require("github-apis");
 // List repository issues
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
 };
 
@@ -41,7 +41,7 @@ const options = {
 // List a repository issue
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     issue_number: 23, // required
@@ -57,7 +57,7 @@ const options = {
 // Create issue on a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     title: "title", // required
@@ -76,7 +76,7 @@ const options = {
 // Update a issue on repo like title, body, status, labels
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     title: "title",
@@ -96,7 +96,7 @@ const options = {
 // Lock an issue
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     issue_number: 23, // required
@@ -113,7 +113,7 @@ const options = {
 // Unlock an issue
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     issue_number: 23, // required
@@ -131,7 +131,7 @@ const options = {
 // List all repository for the authenticated user
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "",
 };
 
@@ -144,7 +144,7 @@ const options = {
 // List a repository for the authenticated user
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
 };
 
@@ -173,7 +173,7 @@ const options = {
 // Update a repository details and its privacy
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     name: "name",
@@ -192,7 +192,7 @@ const options = {
 // Delete a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
 };
 
@@ -207,7 +207,7 @@ const options = {
 // List issue comments for a repository
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
 };
 
@@ -220,7 +220,7 @@ const options = {
 // Get an issue comment
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     comment_id: "comment_id", // required
@@ -236,7 +236,7 @@ const options = {
 // Create an issue comment
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     issue_number: "issue_number", // required
@@ -253,7 +253,7 @@ const options = {
 // Update an issue comment
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     comment_id: "comment_id", // required
@@ -270,7 +270,7 @@ const options = {
 // Delete an issue comment
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     comment_id: "comment_id", // required
@@ -288,7 +288,7 @@ const options = {
 // Lists the available assignees for issues in a repository.
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
 };
 
@@ -301,7 +301,7 @@ const options = {
 // Checks a user has permission to an issue in this repository.
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     assignee: "assignee", // required
@@ -317,7 +317,7 @@ const options = {
 // Add assignees to an issue
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     issue_number: 42, // required
@@ -334,7 +334,7 @@ const options = {
 // Removes one or more assignees from an issue.
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
-  owner: "gituser",
+  owner: "owner", // owner or user
   repo: "repo",
   body: {
     issue_number: 42, // required

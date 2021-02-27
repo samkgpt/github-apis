@@ -46,7 +46,7 @@ const options = {
   },
 };
 (async () => {
-  console.log(await listIssue(options)); // returns <issues_data>
+  console.log(await listIssue(options)); // returns <issue_data>
 })();
 ```
 
@@ -109,7 +109,7 @@ const options = {
   repo: "repo",
 };
 (async () => {
-  console.log(await listRepo(options)); // returns <repos_data>
+  console.log(await listRepo(options)); // returns <repo_data>
 })();
 ```
 
@@ -168,7 +168,7 @@ const options = {
   repo: "repo",
 };
 (async () => {
-  console.log(await listComments(options)); // returns <repos_data>
+  console.log(await listComments(options)); // returns <issue_comments_data>
 })();
 ```
 
@@ -183,7 +183,7 @@ const options = {
   },
 };
 (async () => {
-  console.log(await listComment(options)); // returns <repos_data>
+  console.log(await listComment(options)); // returns <issue_comment_data>
 })();
 ```
 
@@ -194,28 +194,28 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    body: "comment_data",
     issue_number: "issue_number",
+    body: "comment_data",
   },
 };
 (async () => {
-  console.log(await createComment(options)); // returns <created_data>
+  console.log(await createComment(options)); // returns <created_comment_data>
 })();
 ```
 
 ```javascript
-// Update a repository details and its privacy
+// Update an issue comment
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "repo",
   body: {
-    body: "comment_data",
     comment_id: "comment_id",
+    body: "comment_data",
   },
 };
 (async () => {
-  console.log(await updateComment(options)); // returns <updated_data>
+  console.log(await updateComment(options)); // returns <updated_comment_data>
 })();
 ```
 

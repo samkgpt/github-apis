@@ -1,7 +1,7 @@
 {
   "name": "github-apis",
   "version": "1.0.8",
-  "description": "To get GitHub issue, comments, assignee and repo access like details, listing, creating, updating and deleting.",
+  "description": "To get GitHub repository issues, comments, assignee and repository access to perform listing, creating, updating and deleting operations.",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

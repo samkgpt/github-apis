@@ -30,7 +30,9 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
-console.log(listIssues(options)); // returns <issues_data>
+(async () => {
+  console.log(await listIssues(options)); // returns <issues_data>
+})();
 ```
 
 ```javascript
@@ -43,7 +45,9 @@ const options = {
     issue_number: 23, // required
   },
 };
-console.log(listIssue(options)); // returns <issue_data>
+(async () => {
+  console.log(await listIssue(options)); // returns <issues_data>
+})();
 ```
 
 ```javascript
@@ -59,7 +63,9 @@ const options = {
     labels: ["bug", "dev"],
   },
 };
-console.log(createIssue(options)); // returns <created_issue_data>
+(async () => {
+  console.log(await createIssue(options)); // returns <created_issue_data>
+})();
 ```
 
 ```javascript
@@ -76,7 +82,9 @@ const options = {
     labels: ["bug", "dev"],
   },
 };
-console.log(updateIssue(options)); // returns <updated_issue_data>
+(async () => {
+  console.log(await updateIssue(options)); // returns <updated_issue_data>
+})();
 ```
 
 ## GitHub Repository Examples
@@ -88,7 +96,9 @@ const options = {
   owner: "gituser",
   repo: "",
 };
-console.log(listRepos(options)); // returns <repos_data>
+(async () => {
+  console.log(await listRepos(options)); // returns <repos_data>
+})();
 ```
 
 ```javascript
@@ -98,7 +108,9 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
-console.log(listRepo(options)); // returns <repo_data>
+(async () => {
+  console.log(await listRepo(options)); // returns <repos_data>
+})();
 ```
 
 ```javascript
@@ -111,7 +123,9 @@ const options = {
     private: false, // true or false
   },
 };
-console.log(createRepo(options)); // returns <created_repo_data>
+(async () => {
+  console.log(await createRepo(options)); // returns <created_repo_data>
+})();
 ```
 
 ```javascript
@@ -127,7 +141,9 @@ const options = {
     archived: false, // true or false
   },
 };
-console.log(updateRepo(options)); // returns <updated_repo_data>
+(async () => {
+  console.log(await updateRepo(options)); // returns <updated_repo_data>
+})();
 ```
 
 ```javascript
@@ -137,7 +153,9 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
-console.log(deleteRepo(options)); // returns <>
+(async () => {
+  console.log(await deleteRepo(options)); // returns <>
+})();
 ```
 
 ## GitHub Issue Comment Examples
@@ -149,7 +167,9 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
-console.log(listComments(options)); // returns <repos_data>
+(async () => {
+  console.log(await listComments(options)); // returns <repos_data>
+})();
 ```
 
 ```javascript
@@ -162,7 +182,9 @@ const options = {
     comment_id: "comment_id",
   },
 };
-console.log(listComment(options)); // returns <repo_data>
+(async () => {
+  console.log(await listComment(options)); // returns <repos_data>
+})();
 ```
 
 ```javascript
@@ -176,7 +198,9 @@ const options = {
     issue_number: "issue_number",
   },
 };
-console.log(createComment(options)); // returns <created_data>
+(async () => {
+  console.log(await createComment(options)); // returns <created_data>
+})();
 ```
 
 ```javascript
@@ -190,7 +214,9 @@ const options = {
     comment_id: "comment_id",
   },
 };
-console.log(updateComment(options)); // returns <updated_data>
+(async () => {
+  console.log(await updateComment(options)); // returns <updated_data>
+})();
 ```
 
 ```javascript
@@ -203,7 +229,9 @@ const options = {
     comment_id: "comment_id",
   },
 };
-console.log(deleteComment(options)); // returns <>
+(async () => {
+  console.log(await deleteComment(options)); // returns <>
+})();
 ```
 
 For more body options flow [github docs][github-docs], set the param into the body.

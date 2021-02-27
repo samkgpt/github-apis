@@ -18,7 +18,7 @@ $ npm install github-apis
 ```javascript
 var { listIssues, createIssue, updateIssue } = require("github-apis");
 var { listRepos, createRepo, updateRepo, deleteRepo } = require("github-apis");
-var { listComment, createComment, updateComment } = require("github-apis");
+var { listComments, createComment, updateComment } = require("github-apis");
 ```
 
 ## GitHub Issue Examples
@@ -30,6 +30,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
+
 (async () => {
   console.log(await listIssues(options)); // returns <issues_data>
 })();
@@ -45,6 +46,7 @@ const options = {
     issue_number: 23, // required
   },
 };
+
 (async () => {
   console.log(await listIssue(options)); // returns <issue_data>
 })();
@@ -63,6 +65,7 @@ const options = {
     labels: ["bug", "dev"],
   },
 };
+
 (async () => {
   console.log(await createIssue(options)); // returns <created_issue_data>
 })();
@@ -82,6 +85,7 @@ const options = {
     labels: ["bug", "dev"],
   },
 };
+
 (async () => {
   console.log(await updateIssue(options)); // returns <updated_issue_data>
 })();
@@ -96,6 +100,7 @@ const options = {
   owner: "gituser",
   repo: "",
 };
+
 (async () => {
   console.log(await listRepos(options)); // returns <repos_data>
 })();
@@ -108,6 +113,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
+
 (async () => {
   console.log(await listRepo(options)); // returns <repo_data>
 })();
@@ -123,6 +129,7 @@ const options = {
     private: false, // true or false
   },
 };
+
 (async () => {
   console.log(await createRepo(options)); // returns <created_repo_data>
 })();
@@ -141,6 +148,7 @@ const options = {
     archived: false, // true or false
   },
 };
+
 (async () => {
   console.log(await updateRepo(options)); // returns <updated_repo_data>
 })();
@@ -153,6 +161,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
+
 (async () => {
   console.log(await deleteRepo(options)); // returns <>
 })();
@@ -167,6 +176,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
 };
+
 (async () => {
   console.log(await listComments(options)); // returns <issue_comments_data>
 })();
@@ -182,6 +192,7 @@ const options = {
     comment_id: "comment_id",
   },
 };
+
 (async () => {
   console.log(await listComment(options)); // returns <issue_comment_data>
 })();
@@ -198,6 +209,7 @@ const options = {
     body: "comment_data",
   },
 };
+
 (async () => {
   console.log(await createComment(options)); // returns <created_comment_data>
 })();
@@ -214,6 +226,7 @@ const options = {
     body: "comment_data",
   },
 };
+
 (async () => {
   console.log(await updateComment(options)); // returns <updated_comment_data>
 })();
@@ -229,6 +242,7 @@ const options = {
     comment_id: "comment_id",
   },
 };
+
 (async () => {
   console.log(await deleteComment(options)); // returns <>
 })();

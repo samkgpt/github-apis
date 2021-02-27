@@ -281,6 +281,71 @@ const options = {
 })();
 ```
 
+## GitHub Issue Assignees Examples
+
+```javascript
+// Lists the available assignees for issues in a repository.
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+};
+
+(async () => {
+  console.log(await listAssignees(options)); // returns <assignees_data>
+})();
+```
+
+```javascript
+// Checks a user has permission to be assigned to an issue in this repository.
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    assignee: "assignee",
+  },
+};
+
+(async () => {
+  console.log(await checkAssignee(options)); // returns <assignee_data>
+})();
+```
+
+```javascript
+// Add assignees to an issue
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    issue_number: 42,
+    assignees: ["assignees", "assignees"],
+  },
+};
+
+(async () => {
+  console.log(await addAssignees(options)); // returns <added_assignees_data>
+})();
+```
+
+```javascript
+// Removes one or more assignees from an issue.
+const options = {
+  token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
+  owner: "gituser",
+  repo: "repo",
+  body: {
+    issue_number: 42,
+    assignees: ["assignees", "assignees"],
+  },
+};
+
+(async () => {
+  console.log(await removeAssignees(options)); // returns <assignees_data>
+})();
+```
+
 For more body options flow [github docs][github-docs], set the param into the body.
 
 To [authenticate][github-oauth2] with GitHub, set the [`token`][github-token] option.

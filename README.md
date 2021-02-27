@@ -222,7 +222,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    comment_id: "comment_id",
+    comment_id: "comment_id", // required
   },
 };
 
@@ -238,7 +238,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    issue_number: "issue_number",
+    issue_number: "issue_number", // required
     body: "comment_data",
   },
 };
@@ -255,7 +255,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    comment_id: "comment_id",
+    comment_id: "comment_id", // required
     body: "comment_data",
   },
 };
@@ -272,7 +272,7 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    comment_id: "comment_id",
+    comment_id: "comment_id", // required
   },
 };
 
@@ -297,13 +297,13 @@ const options = {
 ```
 
 ```javascript
-// Checks a user has permission to be assigned to an issue in this repository.
+// Checks a user has permission to an issue in this repository.
 const options = {
   token: "1e3ed294c3f7tce7btdcdg18t88d98b743f9ac48t135656",
   owner: "gituser",
   repo: "repo",
   body: {
-    assignee: "assignee",
+    assignee: "assignee", // required
   },
 };
 
@@ -319,8 +319,8 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    issue_number: 42,
-    assignees: ["assignees", "assignees"],
+    issue_number: 42, // required
+    assignees: ["assignees", "assignees"], // required
   },
 };
 
@@ -336,8 +336,8 @@ const options = {
   owner: "gituser",
   repo: "repo",
   body: {
-    issue_number: 42,
-    assignees: ["assignees", "assignees"],
+    issue_number: 42, // required
+    assignees: ["assignees", "assignees"], // required
   },
 };
 

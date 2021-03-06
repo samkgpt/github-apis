@@ -347,7 +347,7 @@ const options = {
 })();
 ```
 
-For more body options flow [github docs][github-docs], set the param into the body.
+For more body options follow [github docs][github-docs], set the param into the body.
 
 To [authenticate][github-oauth2] with GitHub, set the [`token`][github-token] option.
 
